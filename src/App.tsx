@@ -1,19 +1,17 @@
 import { useState } from 'react'
 import Header from './component/Header'
 import Display from './component/Display'
-import Rectangle from './component/Rectangle'
 import Footer from './component/Footer'
 
 function App() {
   
 
   return (
-    <>
+    <div className='flex flex-col'>
     <Header/>
     <Display/>
-    <Rectangle/>
     <Footer/>
-    </>
+    </div>
   )
 }
 

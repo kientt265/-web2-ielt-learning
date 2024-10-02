@@ -6,7 +6,7 @@ import insta from '../assets/insta.png';
 
 const Footer = () => {
   return (
-    <div className='bg-[#111538]'>
+    <div className='bg-[#111538] '>
         <div className='flex gap-2 justify-around '>
             <div className='text-white w-[30%] m-4'>
                 <h1 className='font-bold text-[200%]'>Education</h1>
