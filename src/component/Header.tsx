@@ -1,0 +1,28 @@
+import React from 'react'
+
+const Header = () => {
+  return (
+    <div   >
+        <div className='flex  bg-white-300 p-3 items-center'>
+        <div className='flex gap-1 w-[20%] ml-5'>
+            <h1 className='font-bold text-blue-700'>Fantasy</h1>
+            <h1 className='font-bold'>IELTS</h1>
+        </div>
+        <div className='flex justify-center gap-7 w-[60%] text-[80%] '>
+            <a href="#" className='font-bold'>Home</a>
+            <a href="#">IELTS Exam Library</a>
+            <a href="#">TED Videos</a>
+            <a href="#">About Us</a>
+        </div>
+        <div className='flex justify-around items-center w-[20%]'>
+            <p className='font-bold cursor-pointer'>Sign In</p>
+            <div>
+                <p className='font-bold bg-[#525FE1] rounded p-2 cursor-pointer'>Sign Up</p>
+            </div>
+        </div>
+        </div>
+    </div>
+  )
+}
+
+export default Header
