@@ -10,13 +10,17 @@ import lombok.NoArgsConstructor;
 
 import java.util.List;
 
-@Document(collection= "reading_sections")
+@Document(collection= "reading_passage")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ReadingSection {
+public class ReadingPart {
     @Id
     private ObjectId _id;
 
-    private List<ReadingPart> passages;
+    private String title;;
+
+    private List<String> paragraphs;
+
+    private List<Question> questions;
 }

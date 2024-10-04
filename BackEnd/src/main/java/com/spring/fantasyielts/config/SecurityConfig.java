@@ -19,7 +19,7 @@ import org.springframework.security.web.SecurityFilterChain;
     public SecurityFilterChain defaultFilterChain(HttpSecurity httpSecurity) throws Exception {
         return  httpSecurity
         .csrf(csrf -> csrf.disable())
-        .authorizeHttpRequests(auth -> auth.requestMatchers("/register","/login" , "/error")
+        .authorizeHttpRequests(auth -> auth.requestMatchers("/register", "/error")
         .permitAll().anyRequest().authenticated())
         .httpBasic(Customizer.withDefaults())
         .formLogin(Customizer.withDefaults())

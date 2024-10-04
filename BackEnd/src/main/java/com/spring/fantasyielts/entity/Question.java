@@ -9,6 +9,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
+import java.util.Optional;
 
 @Document(collection= "questions")
 @Data
@@ -20,7 +21,9 @@ public class Question {
     
     private String title;
 
+    private Optional<String> imageUrl;
+
     private String type;
 
-    private List<SubQuestion> sub_questions;
+    private Optional<List<SubQuestion>> sub_questions;
 }

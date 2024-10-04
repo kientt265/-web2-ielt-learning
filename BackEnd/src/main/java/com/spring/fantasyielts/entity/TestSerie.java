@@ -1,5 +1,7 @@
 package com.spring.fantasyielts.entity;
 
+import java.util.List;
+
 import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.annotation.Id;
@@ -28,5 +30,6 @@ public class TestSerie {
     
     private Integer seriesNumber;
    
+    private List<Test> tests;
     
 }

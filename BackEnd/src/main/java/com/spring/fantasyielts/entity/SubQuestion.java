@@ -8,6 +8,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+import java.util.Optional;
+
 @Document(collection= "sub_questions")
 @Data
 @AllArgsConstructor
@@ -18,5 +21,7 @@ public class SubQuestion  {
 
     private String title;
 
-    private String answer;
+    private Optional<String> answer;
+
+    private Optional<List<String>> options;
 }

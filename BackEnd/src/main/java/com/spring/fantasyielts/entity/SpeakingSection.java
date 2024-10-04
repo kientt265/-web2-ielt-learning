@@ -8,6 +8,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Document(collection= "speaking_sections")
 @Data
 @AllArgsConstructor
@@ -16,9 +18,5 @@ public class SpeakingSection {
     @Id
     private ObjectId _id;
 
-    private ObjectId taskOne;
-
-    private ObjectId taskTwo;
-
-    private ObjectId taskThree;
+    private List<Question> questions;
 }

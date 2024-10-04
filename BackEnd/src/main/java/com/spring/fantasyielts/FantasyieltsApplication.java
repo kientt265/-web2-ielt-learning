@@ -9,5 +9,4 @@ public class FantasyieltsApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(FantasyieltsApplication.class, args);
 	}
-
 }
