@@ -16,22 +16,24 @@ import lombok.NoArgsConstructor;
 
 import java.util.List;
 
-@Document(collection= "questions")
+@Document(collection= "parts")
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
-public class Question {
+@AllArgsConstructor
+public class Part {
     @Id
     @JsonSerialize(using = ObjectIdSerializer.class)
     @JsonDeserialize(using = ObjectIdDeserializer.class)
     private ObjectId _id;
-    
-    private String title;
 
-    private String imageData;
+    private String title;
 
     private String type;
 
+    private String audioData;
+
+    private List<String> paragraphs;
+
     @DocumentReference
-    private List<SubQuestion> subQuestions;
+    private List<Question> questions;
 }

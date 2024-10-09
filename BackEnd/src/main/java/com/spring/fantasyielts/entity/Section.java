@@ -12,26 +12,30 @@ import com.spring.fantasyielts.util.ObjectIdDeserializer;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.List;
 
-@Document(collection= "questions")
+import com.spring.fantasyielts.enums.SectionTypes;
+
+@Document(collection= "sections")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Question {
+@Getter
+@Setter
+public class Section {
     @Id
     @JsonSerialize(using = ObjectIdSerializer.class)
     @JsonDeserialize(using = ObjectIdDeserializer.class)
     private ObjectId _id;
-    
+
     private String title;
 
-    private String imageData;
-
-    private String type;
-
+    private SectionTypes type;
+    
     @DocumentReference
-    private List<SubQuestion> subQuestions;
+    private List<Part> parts;
 }

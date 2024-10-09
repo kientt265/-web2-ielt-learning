@@ -1,22 +1,20 @@
 package com.spring.fantasyielts.entity;
 
-import org.springframework.data.mongodb.core.mapping.Document;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
-@Document(collection="writing_sections")
+@Document(collection = "subquestion_results")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class WritingSection {
+public class SubQuestionResult {
     @Id
     private ObjectId _id;
 
-    private List<Question> quetions;
+    private String answer;
 }

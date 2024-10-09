@@ -7,5 +7,5 @@ import org.springframework.stereotype.Repository;
 import com.spring.fantasyielts.entity.TestSerie;
 
 @Repository
-public interface TestSerieResponsitory extends MongoRepository<TestSerie, ObjectId> {
+public interface TestSerieRespository extends MongoRepository<TestSerie, ObjectId> {
 }
